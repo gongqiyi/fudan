@@ -1,0 +1,82 @@
+
+<style type="text/css">
+    img { border:none; }
+    .wrapper { width:1000px; margin:0 auto; }
+    .wrapper h3{color:#3366cc;font-size:16px;height:35px;line-height:1.9;text-align:center;border-bottom:1px solid #E5E5E5;margin:0 0 10px 0;}
+    #con1_1 { position:relative; }
+    #con1_1 .product_list { position:absolute; left:0px; top:0px; padding:10px; background:#eee; margin:5px;}
+    .product_list img { width:200px;}
+    .product_list p { padding:5px 0px; font-size:12px; text-align:center; color:#333;  white-space:normal; width:200px;}
+</style>
+
+                        <div class="wrapper">
+                            <h3>瀑布流实例</h3>
+                            <div id="con1_1">
+                                <div class="product_list"> <a href="#"><img src="images/news-media-01.jpg"></a><p>【乖怪蜜桃.搭搭配】~貂绒嫁到~今年好流行的材质呢~跟风购入~颜色质感都好喜欢de 说呢~重点还很保暖</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-02.jpg"></a><p>夏天花裤子是一定要有的哦！</p> </div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-03.jpg"></a><p>薄荷绿的西裤子 怎么穿怎么好看</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-04.jpg"></a><p>超长款的雪纺开衫，很仙很气场呢，敞开穿比较大气，扣起来系个腰带，很淑女哈</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-02.jpg"></a><p>二零一二，十月。去年夏季最喜欢的雏菊小衬衫+牛仔长裙 还有最爱的复古手工包</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-02.jpg"></a><p>还有4年就奔3了，现在就拼命地装嫩吧，不然真到30大几岁还这副模样真真是恶心透了 啊哈哈~~ 装嫩必备蛋糕裙！</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-03.jpg"></a><p>依旧牛仔上衣和室内照。不要以为主角是衣服，其实是鞋子。</p></div>
+                                <div class="product_list"> <a href="#"><img src="images/news-media-04.jpg"></a><p>很简单的大学生而已</p></div>
+                            </div>
+                        </div>
+
+@include('include/foot_start.html')
+<script>
+//    $(function(){
+//        commonApp.init();
+//    });
+//
+//
+//
+//    var grid = document.querySelector('.grid');
+//    var msnry = new Masonry( grid, {
+//        columnWidth: 3
+//    });
+    //
+    //    grid.addEventListener( 'click', function( event ) {
+    //        // don't proceed if item was not clicked on
+    //        if ( !matchesSelector( event.target, '.grid-item' ) ) {
+    //            return;
+    //        }
+    //        // change size of item via class
+    //        event.target.classList.toggle('grid-item--gigante');
+    //        // trigger layout
+    //        msnry.layout();
+    //    });
+
+
+
+
+</script>
+<script src="js/masonry.js"></script>
+<script>
+    window._bd_share_config={
+        "common":{
+            "bdSnsKey":{},
+            "bdText":"",
+            "bdMini":"2",
+            "bdMiniList":false,
+            "bdPic":"",
+            "bdStyle":"0",
+            "bdSize":"32"
+        },"share":{}
+    };
+    with(document)0[
+        (getElementsByTagName('head')[0]||body).appendChild(
+            createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    $(document).ready(function(){
+        var $container = $('#con1_1');
+        $container.imagesLoaded(function(){
+            $container.masonry({
+                itemSelector: '.product_list',
+                columnWidth: 5 //每两列之间的间隙为5像素
+            });
+        });
+
+    });
+</script>
+
+@include('include/foot_end.html')

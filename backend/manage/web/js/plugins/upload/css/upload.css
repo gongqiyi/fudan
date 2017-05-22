@@ -1,0 +1,300 @@
+@charset "utf-8";
+/**
+ * Created by Dookay xiaopig on 2015/11/9.
+ */
+
+/* 上传图片 */
+.upload-wraper{
+  height: 292px;
+}
+.upload-wraper .queue-list{
+  height: 100%;
+  border:3px dashed #eee;
+  -webkit-transition:background-color 0.2s ease-in-out;
+  -moz-transition:background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition:background-color 0.2s ease-in-out;
+}
+.upload-wraper .queue-list.webuploader-dnd-over{
+  border-color: #ccc;
+}
+.upload-wraper .upload-btn-big{
+  text-align: center;
+  padding-top: 90px;
+}
+.upload-wraper .upload-btn-big .iconfont{
+  line-height: 48px;
+  font-size: 48px;
+  color: #ddd;
+}
+.upload-wraper .upload-btn-big .btn{
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 15px;
+  opacity: .9;
+}
+.queue-list.element-invisible .upload-btn-big,
+.status-bar.element-invisible{
+  display: none;
+}
+.webuploader-container label{margin-bottom: 0;}
+.webuploader-container div{
+  vertical-align: top;
+}
+.queue-list .webuploader-pick{
+  margin-top: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.status-bar{
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.status-bar .progress{
+  position: relative;
+  float: left;
+  width: 150px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  height: 18px;
+  margin-top: 6px;
+  line-height: 18px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #eee;
+}
+.status-bar .progress .percentage{
+  display: block;
+  float: left;
+  height: 100%;
+  background-color: #5bc0de;
+  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+.status-bar .progress .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+.status-bar .info{
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  max-width: 320px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.status-bar .operate{
+  float: right;
+}
+.status-bar .operate .btn{
+  margin-left: 10px;
+  border-color: #00b7ee;
+  background-color: #00b7ee;
+}
+.status-bar .operate .btn:hover{
+  border-color: #00a2d4;
+  background-color: #00a2d4;
+}
+.status-bar .operate .webuploader-container{
+  float: left;
+}
+.status-bar .operate .webuploader-pick{
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  border:1px solid #ccc;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.status-bar .operate .webuploader-pick-hover{
+  background-color: #ebebeb;
+  border-color: #b8b8b8;
+}
+.queue-list.element-invisible{
+  height: 240px;
+  margin-top: 10px;
+  border:none;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.upload-wraper .queue-list.webuploader-dnd-over.element-invisible{
+  background-color: #fafafa;
+}
+.filelist{
+  margin-left: -10px;
+}
+.filelist li{
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 105px;
+  margin-bottom: 10px;
+}
+.filelist .imgWrap{
+  margin-left: 10px;
+  height: 105px;
+  line-height: 105px;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+.filelist .imgWrap img{
+  width: 100%;
+}
+.filelist .file-panel{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  z-index: 3;
+}
+.filelist .progress{
+  position: absolute;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  height: 12px;
+  overflow: hidden;
+  background-color: transparent;
+}
+.filelist .progress span{
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  background-color: #5bc0de;
+  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+  -webit-transition: width 200ms linear;
+  -moz-transition: width 200ms linear;
+  -o-transition: width 200ms linear;
+  -ms-transition: width 200ms linear;
+  transition: width 200ms linear;
+  -webkit-transform: translateZ(0);
+}
+.filelist li .error{
+  position: absolute;
+  left: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 35%;
+  background-color: rgba(255,5,5,.4);
+}
+.filelist .file-panel{
+  right: 0;
+  padding: 0 10px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.filelist .file-panel span{
+  display:inline-block;
+  cursor: pointer;
+}
+.filelist .file-panel span:hover{
+  text-decoration: underline;
+}
+.filelist li:hover .file-panel{
+  opacity: 1;
+}
+
+.filelist li .success{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border:20px solid #00b7ee;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  display: none;
+}
+.filelist li .success .iconfont{
+  display: inline-block;
+  margin: -6px 0 0 -3px;
+  font-size: 20px;
+  color: #fff;
+}
+.filelist li.state-complete{
+  cursor: pointer;
+}
+.filelist li.active .success{
+  display: block;
+}
+
+/* 插入图片 */
+.remote-img-show{
+  height: 225px;
+  padding-top: 100px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #fafafa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 在线管理 */
+.manage-wraper .manage-cnt{
+  margin-top: 15px;
+  height: 248px;
+  overflow: auto;
+}
+.manage-wraper .filelist li{
+  cursor: pointer;
+}
+.manage-wraper .pagination-wraper{
+  text-align: center;
+}
+.manage-wraper .pagination-wraper ul{
+  display: inline-block;
+  vertical-align: middle;
+}
+.manage-wraper .form-inline .form-group{
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: 85%;
+}
+.manage-wraper .form-inline .btn{
+  float: right;
+  width: 13%;
+}

@@ -1,0 +1,124 @@
+@include('include/head.html')
+@include('include/nav.html')
+<div class="do-box">
+    <div class="do-top-bg"></div>
+    <div class="container pt-6" >
+        <nav class="navbar navbar-default visible-xs-block">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo2.png" alt="">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">研究院概况 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">研究院介绍</a></li>
+                                <li><a href="#">研究院荣誉</a></li>
+                                <li><a href="#">研究机构</a></li>
+                                <li><a href="#">社会责任</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="top-tip">
+            <p class="top-tip-fir">News media</p>
+            <p class="top-tip-sec">新闻媒体</p>
+            <div class="top-tip-thr">
+                您当前的位置：
+                <ol class="breadcrumb" style="display: inline-block">
+                    <li><a href="#">首页</a></li>
+                    <li class="active"><a href="#">新闻媒体</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="medical-wrapper news-detail-wrapper">
+            <div class="news-detail">
+                <div class="detail-con">
+                    <h1 class="ellipsis">慢病相对时空年终总结表彰大会</h1>
+                    <div class="detail-weizi">
+                        <p>
+                            复旦大学中西医结合研究院、复旦大学附属华山医院中西医结合科在以往深厚科研底蕴的基础上创建的针对肿瘤及其他重型慢病患者进行心理干预、康复指导及替代医学治疗的“慢病相对时空”公益性的医疗项目已经成功运行了近4年，2015年荣获“上海市卫计委医疗服务品牌优秀示范项目”。2015年9月，在华山医院北院建立了“慢病相对时空（华山医院北院分站）”，2016年7月在崇明建立了“慢病相对时空（崇明分站）”，均得到慢病患者的强烈好评和积极参与。
+                        </p>
+                        <div>
+                            <img src="images/temp/news-detail-01.jpg" alt="">
+                        </div>
+                        <p>
+                            向社会各界展示重型慢病患者参加“慢病相对时空”后的疗效及全新的精神面貌，同时表彰在2016年度“慢病相对时空”公益性医疗项目中表现出色的患者学员、医生和志愿者，“慢病相对时空”公益性医疗项目年终总结表彰会暨崇明康协联谊会日前举行。6名经济贫困、家庭成员身患肿患肿瘤的军烈属家庭在活动上受助。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dx-cut clearfix mb-4">
+            <div class="left pull-left">
+                <a href="#" class="prev"><span class="text-bold">上一部：</span>慢病相对时空年终总结表彰大会</a>
+                <a href="#" class="next mt-1"><span class="text-bold">下一部：</span>4年生存率达99.8% 华山“慢病相对时空”成肿瘤患者家园</a>
+            </div>
+            <div class="right pull-right">
+                <a href="#" class="button">返回列表</a>
+            </div>
+        </div>
+    </div>
+    <!--<div class="dx-cut clearfix mb-4">-->
+        <!--<div class="left pull-left">-->
+            <!--<a href="#" class="prev">上一部：慢病相对时空年终总结表彰大会</a>-->
+            <!--<a href="#" class="next">下一部：4年生存率达99.8% 华山“慢病相对时空”成肿瘤患者家园</a>-->
+        <!--</div>-->
+        <!--<div class="right pull-right">-->
+            <!--<a href="#" class="button">返回列表</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="do-search visible-xs-block">
+        <div class="title">
+            <h4>Search Center</h4>
+            <p>搜索中心</p>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="请输入关键词">
+            <button type="button" class="iconfont icon-fangdajing"></button>
+        </div>
+        <p class="copyright">版权©2016复旦大学中西医结合研究院</p>
+        <div class="bdsharebuttonbox pb-6">
+            <a href="#" class="bds_sqq iconfont icon-qq" data-cmd="sqq" title="分享到QQ好友"></a>
+            <a href="#" class="bds_tsina iconfont icon-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin iconfont icon-weixin" data-cmd="weixin" title="分享到微信"></a>
+        </div>
+    </div>
+    <div class="do-bottom-bg"></div>
+</div>
+@include('include/foot_start.html')
+<script>
+    $(function(){
+        commonApp.init();
+    });
+</script>
+<script>
+    window._bd_share_config={
+        "common":{
+            "bdSnsKey":{},
+            "bdText":"",
+            "bdMini":"2",
+            "bdMiniList":false,
+            "bdPic":"",
+            "bdStyle":"0",
+            "bdSize":"32"
+        },"share":{}
+    };
+    with(document)0[
+        (getElementsByTagName('head')[0]||body).appendChild(
+            createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+@include('include/foot_end.html')

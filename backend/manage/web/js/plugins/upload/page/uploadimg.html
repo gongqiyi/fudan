@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title></title>
+<!-- 核心样式开始 -->
+<link rel="stylesheet" href="../../../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../css/main.css">
+<link rel="stylesheet" href="../../../../css/font_1474340650_52283.css"><!-- 核心样式结束 -->
+<!-- 上传控件样式 -->
+<link rel="stylesheet" href="../js/webuploader/webuploader.css">
+<link rel="stylesheet" href="../css/upload.css">
+</head>
+<body>
+<!-- tab开始 -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation"><a href="#tab-insert" aria-controls="tab-insert" role="tab" data-toggle="tab">插入图片</a></li>
+  <li role="presentation" class="active"><a href="#tab-upload" aria-controls="tab-upload" role="tab" data-toggle="tab">本地上传</a></li>
+  <li role="presentation"><a href="#tab-manage" aria-controls="tab-manage" role="tab" data-toggle="tab">在线管理</a></li>
+  <!--<li role="presentation"><a href="#tab-search" aria-controls="tab-search" role="tab" data-toggle="tab">图片搜索</a></li>-->
+</ul>
+<div class="tab-content">
+  <!-- 插入图片 -->
+  <div class="tab-pane" id="tab-insert" role="tabpanel">
+    <form id="remote_image_form" action="javascript:;" method="post">
+      <div class="form-group">
+        <input class="form-control" id="j_remote_image" type="text" name="remoteImage" placeholder="请输入图片地址">
+        <p class="hint-block" id="remote_image_info"></p>
+      </div>
+    </form>
+    <div class="remote-img-show" id="remote_image_show"></div>
+  </div>
+  <!-- 本地上传 -->
+  <div class="tab-pane upload-wraper active" id="tab-upload" role="tabpanel">
+    <div class="status-bar clearfix" style="display: none;">
+      <div class="progress" style="display: none;">
+        <span class="text">0%</span>
+        <span class="percentage" style="width: 0%;"></span>
+      </div>
+      <div class="info">共0张（0B），已上传0张</div>
+      <div class="operate">
+        <div id="filePicker"></div>
+        <div class="btn btn-primary btn-upload state-pedding">开始上传</div>
+      </div>
+    </div>
+    <div class="queue-list scroll-bar" id="dndArea">
+      <div class="upload-btn-big">
+        <span class="iconfont">&#xe614;</span><br>
+        <div id="picker">点击选择图片</div>
+      </div>
+      <ul class="filelist clearfix"></ul>
+    </div>
+  </div>
+  <!-- 在线管理 -->
+  <div class="tab-pane manage-wraper" id="tab-manage" role="tabpanel">
+    <!--<form class="form-inline" action="javascript:;" method="get">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="请输入关键词">
+      </div>
+      <button type="submit" class="btn btn-info">筛选</button>
+    </form>-->
+    <div class="scroll-bar manage-cnt">
+      <ul class="filelist clearfix" id="manage_cnt"></ul>
+      <div class="pagination-wraper clearfix" id="j_pagination"></div>
+    </div>
+  </div>
+  <!-- 图片搜索 -->
+  <div class="tab-pane" id="tab-search" role="tabpanel">
+
+  </div>
+</div>
+
+<!-- 核心js开始 -->
+<script src="../../../dookayui.min.js"></script>
+<script src="../../../common.js"></script>
+<script src="../js/webuploader/webuploader.min.js"></script>
+<script src="../js/uploadimg.js"></script>
+<script src="../js/uploadmain.js"></script><!-- 核心js结束 -->
+<!-- 页面js开始 -->
+<script>
+  $(function(){
+    commonApp.init();
+    if(window.self == window.top) {
+      commonApp.dialog.error('Error,检测发现当前页不是通过iframe加载!',{
+        confirm:function(){
+          window.close();
+        }
+      });
+    }else{
+      uploadimgApp.init();
+      uploadmainApp.init(uploadimgApp);
+    }
+  });
+
+  function selectImg(){
+    return uploadmainApp.getFiles();
+  }
+</script><!-- 页面js结束 -->
+
+</body>
+</html>
